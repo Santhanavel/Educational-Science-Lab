@@ -1,1 +1,0 @@
-source_chemistry[[:space:]]lab1.fbx filter=lfs diff=lfs merge=lfs -text
