@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+﻿#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 using System.IO;
@@ -47,8 +47,8 @@ public class AnimationClipCsvExporterEditor : Editor
             return;
         }
 
-        const float sampleRateHz = 100f;       // 100 values per second
-        const float stepMs = 10f;               // 10 ms
+        const float sampleRateHz = 100f;   // 100 samples per second
+        const float stepMs = 10f;           // 10 ms
         float durationMs = clip.length * 1000f;
 
         int totalSamples = Mathf.RoundToInt(durationMs / stepMs);
@@ -75,15 +75,24 @@ public class AnimationClipCsvExporterEditor : Editor
             );
         }
 
-        string path = Path.Combine(
+        // 🔹 Ask user for save path
+        string savePath = EditorUtility.SaveFilePanel(
+            "Save Euler Telemetry CSV",
             Application.dataPath,
-            exporter.fileName + "_Euler_100Hz.csv"
+            exporter.fileName + "_Euler_100Hz",
+            "csv"
         );
 
-        File.WriteAllText(path, csv.ToString());
+        if (string.IsNullOrEmpty(savePath))
+        {
+            Debug.Log("CSV export cancelled.");
+            return;
+        }
+
+        File.WriteAllText(savePath, csv.ToString());
         AssetDatabase.Refresh();
 
-        Debug.Log($"Euler 100Hz CSV generated: {path}");
+        Debug.Log($"Euler 100Hz CSV generated at: {savePath}");
     }
 }
 #endif

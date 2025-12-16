@@ -557,9 +557,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CsvToRotationJsonExporter
   csvFile: {fileID: 4900000, guid: 7932f8960e459c24791b429f749f8e3a, type: 3}
-  video_id: Animation Data
-  outputFileName: RotationTelemetry
   samplingRateHz: 100
+  video_id: Animation Data
+  lastSavedPath: "D:/Santhanavel Personal/Educational-Science-Lab/Acid\u2013Base
+    Titration/Assets/Datas/Json Data/AnimationData_Euler_100Hz_telemetry.json"
 --- !u!1 &1789592628
 GameObject:
   m_ObjectHideFlags: 0
