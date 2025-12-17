@@ -19,8 +19,8 @@ public class CsvToRotationJsonExporter : MonoBehaviour
 public class RotationFrame
 {
     public string time;
-    public float roll;
     public float pitch;
+    public float roll;
     public float yaw;
 }
 

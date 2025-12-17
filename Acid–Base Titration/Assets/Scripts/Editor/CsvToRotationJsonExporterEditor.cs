@@ -67,15 +67,15 @@ public class CsvToRotationJsonExporterEditor : Editor
             string[] cols = lines[i].Split(',');
 
             float timeMs = float.Parse(cols[0], CultureInfo.InvariantCulture);
-            float roll = float.Parse(cols[1], CultureInfo.InvariantCulture);
-            float pitch = float.Parse(cols[2], CultureInfo.InvariantCulture);
+            float pitch = float.Parse(cols[1], CultureInfo.InvariantCulture);
+            float roll = float.Parse(cols[2], CultureInfo.InvariantCulture);
             float yaw = float.Parse(cols[3], CultureInfo.InvariantCulture);
 
             json.frames.Add(new RotationFrame
             {
                 time = (timeMs / 1000f).ToString("F4", CultureInfo.InvariantCulture),
-                roll = roll,
                 pitch = pitch,
+                roll = roll,
                 yaw = yaw
             });
 

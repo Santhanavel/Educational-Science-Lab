@@ -483,7 +483,6 @@ GameObject:
   - component: {fileID: 1324068006}
   - component: {fileID: 1324068003}
   - component: {fileID: 1324068007}
-  - component: {fileID: 1324068008}
   m_Layer: 0
   m_Name: chare
   m_TagString: Untagged
@@ -544,23 +543,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnimationClipCsvExporter
   animationClip: {fileID: 7400000, guid: 024f39f73fd06f54599f62e7b36ad91d, type: 2}
   fileName: AnimationData
---- !u!114 &1324068008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324068002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8182801b2cfb14e4490ecf92f0fd0f88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CsvToRotationJsonExporter
-  csvFile: {fileID: 4900000, guid: 67b1b133f859a5647ad2c994ecedf4d8, type: 3}
-  samplingRateHz: 100
-  video_id: Animation Data
-  lastSavedPath: "D:/Santhanavel Personal/Educational-Science-Lab/Acid\u2013Base
-    Titration/Assets/Datas/Json Data/AnimationData.json"
 --- !u!1 &1789592628
 GameObject:
   m_ObjectHideFlags: 0

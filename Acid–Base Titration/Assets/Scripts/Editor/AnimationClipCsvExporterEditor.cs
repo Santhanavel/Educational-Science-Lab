@@ -54,7 +54,7 @@ public class AnimationClipCsvExporterEditor : Editor
         int totalSamples = Mathf.RoundToInt(durationMs / stepMs);
 
         StringBuilder csv = new StringBuilder();
-        csv.AppendLine("time_ms,roll,pitch,yaw");
+        csv.AppendLine("time_ms,pitch,roll,yaw");
 
         for (int i = 0; i <= totalSamples; i++)
         {
